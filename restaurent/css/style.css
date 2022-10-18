@@ -1,0 +1,1769 @@
+/* CSS Document */
+/* The character encoding */
+@charset "utf-8";
+
+/*===== FontFamily =====*/
+/* First font: ShadowsIntoLightTwo */
+@font-face {
+    font-family: myFirstFont;
+    src: url("../fontfamily/Shadows_Into_Light_Two/ShadowsIntoLightTwo-Regular.ttf");
+}
+
+/* Second font: Rubik */
+@font-face {
+    font-family: mySecondFont;
+    src: url("../fontfamily/Rubik/static/Rubik-Regular.ttf");
+}
+
+/* Third font: Roboto */
+@font-face {
+    font-family: myThirdFont;
+    src: url("../fontfamily/Roboto/Roboto-Regular.ttf");
+}
+
+/* The universal selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+/* Body */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: myThirdFont;
+    font-size: 16px;
+}
+
+/* Html behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* The heading */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: mySecondFont;
+}
+
+/* List */
+ul,
+ol {
+    list-style-type: none;
+}
+
+/* link */
+a {
+    text-decoration: none;
+}
+
+/* Image */
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* All width equal */
+.foodarea,
+.allfoodtextarea,
+#aboutusmain .textarea {
+    width: 100%;
+}
+
+/*=== Container ===*/
+section.container {
+    width: 1240px;
+    margin: auto;
+}
+
+/*=== All rows ===*/
+.row {
+    overflow: auto;
+}
+
+/*===== 2 Columns layout =====*/
+.promo .column,
+#qualityfoodburger .column,
+#delivary .column,
+#aboutinner .column,
+#caferiohistory .column,
+#productdetails .column,
+#food_category_price .column,
+#comment_list .column,
+#thumbnail_image_gallery .column,
+#blogdetails .column,
+#contact_area .column {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+/*===== 3 Columns layout =====*/
+#deliciousfood .column,
+footer .column {
+    width: 33.33%;
+    float: left;
+    padding: 5px;
+}
+
+#fooditemlight_Box .column {
+    width: 33.33%;
+    float: left;
+    padding: 0 10px 10px 0;
+}
+
+/*===== 4 Columns layout =====*/
+.foodarea .column,
+#team_memberarea .column,
+#feature_list .column {
+    width: 25%;
+    float: left;
+    padding: 5px;
+}
+
+/*===== FontAwesome 5 icons =====*/
+.foodicon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*===== Big Buttons =====*/
+.Big button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*===== Small Buttons =====*/
+.Smallbutton.btn,
+.promo a,
+#deliciousfood .filterbtn,
+#qualityfoodburger a,
+#delivary a,
+.aboutinfo a,
+#productdetails button,
+#contact_area input[type=submit] {
+    border: none;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/*===== Sticky Menu for all pages =====*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #c7b5ab;
+    transition: 0.6s;
+    padding: 0 25px;
+    z-index: 3;
+}
+
+header .container {
+    position: relative;
+    max-width: 1240px;
+    margin: auto;
+}
+
+header.sticky {
+    background-color: black;
+    border-bottom: 1px solid transparent;
+}
+
+header .container a.logo img {
+    position: relative;
+    float: left;
+    max-width: 150px;
+    text-decoration: none;
+    padding: 10px 0 10px;
+    transition: 0.6s;
+}
+
+header nav {
+    float: right;
+}
+
+header ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+header ul li {
+    float: left;
+}
+
+header nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+    font-family: mySecondFont;
+    color: white;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    transition: 0.6s;
+}
+
+nav ul li a.active {
+    background-color: papayawhip;
+    color: peru;
+}
+
+header nav ul li a:hover {
+    background-color: papayawhip;
+    color: peru;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+header nav ul li:last-child a:hover {
+    background-color: transparent;
+    color: white;
+}
+
+header.sticky ul li a {
+    color: white;
+}
+
+header.sticky nav ul li a.active {
+    background-color: papayawhip;
+    color: peru;
+}
+
+#mainarea {
+    position: relative;
+}
+
+/*==================================
+	       Index Page
+==================================*/
+/*===== SliderArea Start ===== */
+/*===== SliderArea ===== */
+#sliderarea {
+    background: transparent url("../img/slider-bg-01.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
+    margin-bottom: 30px;
+}
+
+#sliderarea .item:first-child img,
+#sliderarea .item:nth-child(2) img,
+#sliderarea .item:last-child img {
+    width: 450px;
+    height: auto;
+    margin-top: 150px;
+}
+
+#sliderarea .item:first-child img,
+#sliderarea .item:nth-child(2) img {
+    margin-right: 150px;
+}
+
+#sliderarea .item:last-child img {
+    margin-left: 150px;
+}
+
+/* Next and Previous arrow in slider */
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+    font-size: 80px !important;
+    color: #1a9c18 !important;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 50%;
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: 50px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    right: 50px;
+}
+
+.owl-theme .owl-dots,
+.owl-theme .owl-nav {
+    margin-bottom: 20px;
+}
+
+.owl-theme .owl-nav {
+    margin-top: -50px !important;
+}
+
+#sliderarea .item h2 {
+    font-family: myFirstFont;
+    color: #ff8e28;
+    position: absolute;
+}
+
+#sliderarea .item:first-child h2,
+#sliderarea .item:first-child .slidercaption,
+#sliderarea .item:first-child .inner {
+    left: 250px !important;
+}
+
+#sliderarea .item:first-child h2,
+#sliderarea .item:nth-child(2) h2,
+#sliderarea .item:last-child h2 {
+    top: 25% !important;
+}
+
+#sliderarea .item:first-child .slidercaption,
+section.item:nth-child(2) .slidercaption {
+    position: absolute;
+    top: 30%;
+}
+
+#sliderarea .item:last-child .slidercaption {
+    position: absolute;
+    top: 35%;
+    left: 700px;
+}
+
+.slidercaption h1 {
+    font-family: mySecondFont;
+    font-size: 70px;
+    color: #f1d6c5;
+    line-height: 80px;
+    letter-spacing: -3px;
+}
+
+#sliderarea .item:first-child .inner {
+    position: absolute;
+    top: 65% !important;
+}
+
+#sliderarea .inner p {
+    font-family: myThirdFont;
+    font-size: 18px;
+    font-weight: 400;
+    color: #e8cdbc;
+    line-height: 30px;
+    letter-spacing: 0;
+}
+
+#sliderarea .sliderbtn {
+    position: absolute;
+    top: 80%;
+    left: 250px;
+}
+
+#sliderarea .sliderbtn button {
+    background-color: #ff8e28;
+    color: snow;
+    font-family: mySecondFont;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+/* slidershapearea in first image for Slider */
+#sliderarea .item:first-child .slidershapearea {
+    background: transparent url(../img/slider-shape-01.png) no-repeat 0 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* sliderelements in second image for Slider */
+#sliderarea .sliderelements {
+    background: transparent url(../img/sliderelements.png) no-repeat 0 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    right: 70px;
+    top: 30px;
+}
+
+/*===== SliderArea End ===== */
+/*====== Food Area ======*/
+.foodarea {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.fooditem {
+    height: 450px;
+    background-color: darkseagreen;
+    color: darkgreen;
+    padding: 40px 30px;
+    margin: 5px;
+    text-align: center;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.foodarea .foodcontent h3 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.foodarea .foodcontent p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.bacon::before {
+    content: '\f7e5';
+}
+
+.burger::before {
+    content: '\f805';
+}
+
+.chicken::before {
+    content: '\f6d7';
+}
+
+.pizza::before {
+    content: '\f818';
+}
+
+.bacon::before,
+.burger::before,
+.chicken::before,
+.pizza::before {
+    font-size: 60px;
+    color: darkgreen;
+}
+
+.foodarea .fooditem:hover .bacon::before,
+.foodarea .fooditem:hover .burger::before,
+.foodarea .fooditem:hover .chicken::before,
+.foodarea .fooditem:hover .pizza::before,
+.fooditem:hover .foodcontent h3,
+.fooditem:hover .foodcontent p {
+    color: white;
+}
+
+.foodarea .fooditem .foodthumb img {
+    width: 50%;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.foodarea .fooditem:hover img {
+    top: 135%;
+}
+
+.foodarea .fooditem:before {
+    content: "";
+    background-color: #ff9d2d;
+    clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0 100%);
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.foodarea .fooditem:hover:before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    height: 100%;
+    transition: all 0.2s ease;
+}
+
+.foodarea .fooditem:hover .allfoodtextarea {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.foodarea .fooditem:hover .allfoodtextarea .foodcontent {
+    padding: 0 30px;
+}
+
+/*====== Promo Area ======*/
+.promo {
+    height: 700px;
+    background-color: crimson;
+    color: white;
+    padding: 50px 0;
+}
+
+.promo .imagecontentholder img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: block;
+    padding: 25px;
+}
+
+.promo h2 {
+    font-size: 40px;
+    margin-top: 80px;
+    margin-bottom: 25px;
+}
+
+.promo p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.promo ul.check-list li {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.promo ul.check-list li i {
+    margin-right: 10px;
+}
+
+.promo a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: mySecondFont;
+    font-size: 14px;
+    background-color: tomato;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/*====== Deliciousfood Area ======*/
+
+#deliciousfood {
+    height: auto;
+    margin-bottom: 50px;
+}
+
+#deliciousfood h4 {
+    color: #f43127;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: mySecondFont;
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+#deliciousfood h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#deliciousfood p {
+    text-align: center;
+    line-height: 1.5;
+    color: #777;
+}
+
+/* Add padding BETWEEN each column */
+#deliciousfood .row > .column {
+    padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+#deliciousfood .column {
+    float: left;
+    width: 33.33%;
+    display: none;
+    /* Hide all elements by default */
+}
+
+/* Content */
+#deliciousfood .content {
+    background-color: white;
+    padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+#deliciousfood .show {
+    display: block;
+}
+
+#myBtnContainer {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Style the buttons */
+#deliciousfood .filterbtn {
+    background-color: burlywood;
+    color: #a46444;
+    transition: 1s;
+    margin-top: 25px;
+}
+
+#deliciousfood .filterbtn:hover {
+    background-color: #ff9d2d;
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#deliciousfood button.filterbtn.filteractive {
+    background-color: #ff9d2d;
+    color: white;
+}
+
+#deliciousfood .content {
+    background-color: #ccc;
+    height: 500px;
+    padding: 50px;
+}
+
+#deliciousfood .content img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#deliciousfood .foodinfo ul.rating li {
+    float: left;
+    margin-right: 5px;
+    display: block;
+}
+
+#deliciousfood .foodinfo ul.rating li i {
+    color: #ff9d2d;
+}
+
+#deliciousfood .foodinfo h3 {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#deliciousfood .foodinfo .price h4 {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #f43127;
+    margin: 0;
+}
+
+#deliciousfood .foodinfo .price .regular {
+    text-decoration: line-through;
+    color: dimgrey;
+    margin-left: 5px;
+}
+
+/*====== Qualityfoodburger Area ======*/
+#mainarea {
+    background: url(../img/slider-bg-01.jpg) no-repeat 0 0;
+    height: 500px;
+    background-size: cover;
+    color: burlywood;
+}
+
+section#qualityfoodburger {
+    background-color: crimson;
+    color: wheat;
+}
+
+#qualityfoodburger h2 {
+    font-size: 42px;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+#qualityfoodburger p,
+#delivary p {
+    font-family: myThirdFont;
+    text-indent: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+#qualityfoodburger a,
+#delivary a {
+    background-color: burlywood;
+    color: saddlebrown;
+}
+
+#qualityfoodburger img {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/*====== Delivary area ======*/
+#delivary {
+    margin: 50px 0;
+}
+
+#delivary h2 {
+    font-size: 42px;
+    line-height: 50px;
+    color: #0e1318;
+    margin: 100px 0 10px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+#delivary .delivaryimage {
+    position: relative;
+}
+
+#delivary img.cloud {
+    padding: 50px;
+}
+
+#delivary img.delivaryboy {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/*==================================
+	       About Us Page
+==================================*/
+/*====== Aboutus Area ======*/
+#mainarea .textarea .center {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+#mainarea .textarea .center h4 {
+    font-family: mySecondFont;
+    font-size: 16px;
+    color: #ff9d2d;
+    letter-spacing: 1px;
+}
+
+#mainarea .textarea .center h2 {
+    color: #f1d6c5;
+    font-size: 42px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 48px;
+}
+
+/*====== Aboutinner area ======*/
+#aboutinner,
+#fooditemlight_Box {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.bgshap_grey {
+    background: url(../img/shape-grey.png) repeat-x bottom center;
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    top: -15px;
+    z-index: 1;
+}
+
+#aboutinner #videogallery {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+#aboutinner #videogallery img {
+    width: 100%;
+    transform: inherit;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#aboutinner #videogallery a.playbtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#aboutinner #videogallery span.playicon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-color: bisque;
+    color: indianred;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 15px;
+}
+
+#aboutinner #videogallery span.playicon:hover {
+    cursor: pointer;
+}
+
+#aboutinner .pulse::before,
+#aboutinner .pulse::after {
+    content: '';
+    position: absolute;
+    display: block;
+    border: 50%;
+    border: 1px solid bisque;
+    border-radius: 50%;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    animation: pulse 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden;
+    z-index: 3;
+}
+
+.pulse:after {
+    animation-delay: 0.5s;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+#aboutinner .aboutinfo {
+    padding-top: 100px;
+}
+
+#aboutinner .aboutinfo h2 {
+    margin: 50px;
+    font-size: 42px;
+    line-height: 48px;
+}
+
+#aboutinner .aboutinfo p {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 0 50px 30px 50px;
+    text-align: justify;
+}
+
+.aboutinfo a {
+    background-color: burlywood;
+    color: #a46444;
+    margin-left: 50px;
+}
+
+/*====== Caferiohistory area ======*/
+#caferiohistory {
+    background-color: #FC600A;
+    color: #9D3802;
+}
+
+#caferiohistory .historyheading {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 25px;
+}
+
+#caferiohistory .historyheading h4 {
+    display: inline-block;
+    text-transform: capitalize;
+    color: #FCDEE0;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1;
+    font-family: myThirdFont;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#caferiohistory .historyheading h2 {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#caferiohistory .historyheading p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#caferiohistory .historyheading img.sign {
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+#caferiohistory img.cafehistoryimg {
+    display: block;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*====== Team_member area ======*/
+#team_memberarea {
+    height: 800px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+#team_memberarea .headingtextarea {
+    width: 100%;
+    text-align: center;
+}
+
+#team_memberarea .headingtextarea h4,
+#team_memberarea .headingtextarea h2,
+#team_memberarea .headingtextarea p {
+    display: block;
+}
+
+#team_memberarea .headingtextarea h4 {
+    color: #f43127;
+    font-size: 16px;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+#team_memberarea .headingtextarea h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#team_memberarea .headingtextarea p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+/* Team member Card Area */
+.Card {
+    height: 400px;
+}
+
+.Card,
+.Card .shape_area {
+    position: relative;
+}
+
+.Card .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.Card:hover .overlay {
+    height: 100%;
+}
+
+.Card .overlay .teammember_socialarea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.Card .overlay .teammember_socialarea ul.team-social li {
+    display: inline;
+}
+
+.Card .overlay .teammember_socialarea ul.team-social li a {
+    background-color: #ff8e28;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    margin-right: 5px;
+    font-size: 15px;
+    transition: all .5s ease;
+    z-index: 3;
+}
+
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:first-child {
+    background-color: #3b5998;
+}
+
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:nth-child(2) {
+    background-color: #55acee;
+}
+
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:nth-child(3) {
+    background-color: #125688;
+}
+
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:last-child {
+    background-color: #588ff7;
+}
+
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:first-child,
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:nth-child(2),
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:nth-child(3),
+.Card .overlay .teammember_socialarea ul.team-social li a:hover:last-child {
+    color: white;
+    transition: all .5s ease;
+}
+
+.Card .shape_area {
+    height: 150px;
+    display: block;
+}
+
+.Card .shape_area .team_shape {
+    background: url(../img/team-shape.png) no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+.Card .shape_area .inner {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/*==================================
+	       FoodGallery Page
+==================================*/
+#fooditemlight_Box {
+    padding-top: 50px;
+    text-align: center;
+    position: relative;
+}
+
+#fooditemlight_Box img.delicious,
+#fooditemlight_Box img.swirl {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 20%;
+    margin-bottom: 50px;
+}
+
+#fooditemlight_Box section.center {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#fooditemlight_Box p {
+    text-align: left;
+    margin-bottom: 15px;
+    text-indent: 30px;
+    line-height: 1.5;
+}
+
+/*====== Feature_list Area ======*/
+#feature_list {
+    background-color: #FD4D0C;
+    color: #342009;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+
+#feature_list i {
+    font-size: 50px;
+    display: inline-block;
+}
+
+/*====== Food_category_price Area ======*/
+#food_category_price {
+    padding: 80px 0;
+}
+
+#food_category_price .clearfix {
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+#food_category_price .img2 {
+    float: left;
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 30px;
+}
+
+#food_category_price h3 {
+    float: left;
+    width: 50%;
+}
+
+#food_category_price div > p {
+    color: tomato;
+    font-weight: 600;
+}
+
+/*==================================
+	       Shop Page
+==================================*/
+#productdetails {
+    padding: 100px 0;
+    position: relative;
+}
+
+#productdetails .itemimg {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+#productdetails .itemimg img.image {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.5s;
+}
+
+#productdetails .itemimg:hover img.image {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    transition: all 0.5s;
+}
+
+.product_info .product_inner {
+    width: 50%;
+    float: left;
+}
+
+.product_info .product_rank {
+    width: 50%;
+    float: right;
+}
+
+.product_info .product_rank ul.ratting {
+    float: right;
+}
+
+.product_info .product_rank ul.ratting li {
+    float: left;
+    padding-right: 5px;
+}
+
+.product_info .product_rank ul.ratting li:last-child {
+    padding-right: 0;
+}
+
+#productdetails h3 {
+    padding: 30px 0 5px 0;
+}
+
+#productdetails p {
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+#productdetails button {
+    background-color: #ff7634;
+    color: white;
+}
+
+.product_rank .checked {
+    color: red;
+}
+
+.socialicons li {
+    float: left;
+}
+
+.socialicons li a {
+    margin-right: 10px;
+    background-color: #ff7634;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    transition: all .5s;
+}
+
+.socialicons li a:hover {
+    background-color: DarkSalmon;
+    color: sienna;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.socialicons li:first-child a {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+}
+
+/*====== Comment_list Area ======*/
+#comment_list {
+    background-color: #fd4d0c;
+    padding: 35px 0;
+}
+
+.product_comment_area {
+    background-color: #972a02;
+    color: #feb59a;
+    height: 200px;
+    padding: 20px;
+}
+
+.product_comment_area .comment_thumb {
+    width: 30%;
+    float: left;
+}
+
+.product_comment_area .comment_text {
+    width: 70%;
+    float: right;
+}
+
+.product_comment_area .comment_text p {
+    clear: both;
+    padding: 20px 0;
+    line-height: 1.5;
+}
+
+.product_comment_area .comment_thumb img {
+    border-radius: 50%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+.product_comment_area .comment_author span {
+    font-family: mySecondFont;
+    font-size: 14px;
+    font-weight: 500;
+    color: #feb59a;
+    margin-bottom: 10px;
+}
+
+.product_comment_area .comment_author {
+    width: 60%;
+    float: left;
+}
+
+.product_comment_area .comment_rate {
+    width: 40%;
+    float: right;
+}
+
+.product_comment_area .comment_author h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.product_comment_area .comment_rate ul.ratting li {
+    float: left;
+    margin-top: 30px;
+    margin-right: 5px;
+}
+
+/*====== Thumbnail_image_gallery Area ======*/
+#thumbnail_image_gallery {
+    position: relative;
+    padding: 50px 0;
+}
+
+#thumbnail_image_gallery img {
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    margin-right: 10px;
+}
+
+#thumbnail_image_gallery img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+#thumbnail_image_gallery p {
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/*==================================
+            Blog Page
+==================================*/
+#blogdetails {
+    padding: 80px 0;
+    position: relative;
+}
+
+#blogdetails .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    font-family: myThirdFont;
+}
+
+#blogdetails .card .post_content,
+#blogdetails .card .textarea {
+    padding: 25px;
+}
+
+#blogdetails .card .post_content li {
+    float: left;
+}
+
+#blogdetails .card .post_content li a {
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1e1318;
+}
+
+#blogdetails .card .post_content i {
+    margin-right: 10px;
+    color: #eb8215;
+    font-size: 15px;
+}
+
+#blogdetails .card .textarea h1 {
+    font-size: 30px;
+}
+
+#blogdetails .card .textarea p.description {
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
+#blogdetails .sidebar_widget {
+    margin: 0 20px;
+}
+
+#blogdetails .sidebar_widget .widget_title h2 {
+    margin-bottom: 20px;
+}
+
+#blogdetails .sidebar_widget .widget_social li {
+    display: inline;
+    float: left;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+#blogdetails .sidebar_widget .widget_social .fab {
+    padding: 20px;
+    font-size: 20px;
+    width: 200px;
+    text-align: left;
+    text-decoration: none;
+}
+
+#blogdetails .sidebar_widget .widget_social span {
+    margin-left: 20px;
+}
+
+#blogdetails .sidebar_widget .facebook,
+#blogdetails .sidebar_widget .twitter,
+#blogdetails .sidebar_widget .instagram,
+#blogdetails .sidebar_widget .pinterest,
+#blogdetails .sidebar_widget .dribbble,
+#blogdetails .sidebar_widget .linkedin {
+    padding: 20px;
+}
+
+#blogdetails .sidebar_widget .facebook {
+    background: #3B5998;
+    color: white;
+}
+
+#blogdetails .sidebar_widget .twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+#blogdetails .sidebar_widget .instagram {
+    background: #125688;
+    color: white;
+}
+
+#blogdetails .sidebar_widget .pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+#blogdetails .sidebar_widget .dribbble {
+    background: #ea4c89;
+    color: white;
+}
+
+#blogdetails .sidebar_widget .linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.recent_post {
+    width: 100%;
+    float: left;
+    overflow: auto;
+}
+
+.recent_post .postmeta {
+    float: left;
+    max-width: 100%;
+    height: 120px;
+}
+
+.recent_post h2 {
+    font-family: myThirdFont;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.recent_post img {
+    float: left;
+    max-width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.recent_post .postmeta h3 {
+    font-size: 16px;
+    color: #0e1318;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.recent_post .postmeta i {
+    font-size: 15px;
+    color: #eb8215;
+    margin-right: 10px;
+}
+
+/*==================================
+            Contact Page
+==================================*/
+#contact_area {
+    padding: 50px 0;
+}
+
+#contact_area .col-50 {
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+
+#contact_area .col-100 {
+    width: 100%;
+    padding: 5px;
+}
+
+#contact_area h2 {
+    font-family: myThirdFont;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#contact_area input[type=submit] {
+    background-color: green;
+    color: white;
+    margin: 5px;
+}
+
+.contact_details p {
+    font-family: myThirdFont;
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contact_details ul li a {
+    text-decoration: none;
+    float: left;
+    width: 100%;
+    display: inline-block;
+    font-family: mySecondFont;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    padding-top: 10px;
+}
+
+.contact_details ul li a i {
+    display: block;
+    font-size: 20px;
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: dimgrey;
+    text-align: center;
+    margin-right: 20px;
+}
+
+/*====== Footer Area ======*/
+footer {
+    background-color: #EA202C;
+    color: BlanchedAlmond;
+    height: 500px;
+    position: relative;
+    overflow-x: hidden;
+    z-index: -1;
+    clear: both;
+}
+
+footer .footer_widget a.logo img {
+    width: 50%;
+    float: left;
+    margin-top: 50px;
+}
+
+footer .footer_widget p {
+    float: left;
+    text-align: justify;
+    margin-top: 25px;
+    margin-right: 40px;
+    line-height: 1.5;
+}
+
+footer .footer_widget ul.footer_social li {
+    float: left;
+}
+
+footer .footer_widget ul.footer_social li a {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    background-color: darkred;
+    color: Salmon;
+    margin: 10px 10px 0 0;
+    transition: all 0.5s ease-in;
+}
+
+footer .footer_widget ul.footer_social li a:hover {
+    background-color: #448D76;
+    color: #23483C;
+    transition: all 0.5s ease-in;
+}
+
+footer .footer_widget .bottom_center_text,
+footer .footer_widget .bottom_right_text {
+    margin-top: 80px;
+}
+
+footer .footer_widget .bottom_center_text h3,
+footer .footer_widget .bottom_right_text h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+footer .footer_widget .bottom_center_text h3 span,
+footer .footer_widget .bottom_right_text h3 span {
+    width: 30px;
+    height: 5px;
+    display: inline-block;
+    background-color: #ff9d2d;
+    position: relative;
+    margin-left: 10px;
+    top: -2px;
+}
+
+footer .footer_widget .bottom_center_text h3 span::before,
+footer .footer_widget .bottom_right_text h3 span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 5px;
+    height: 5px;
+    background: #ff9d2d;
+}
+
+footer .footer_widget .bottom_center_text ul.contact-info-list li,
+footer .footer_widget .bottom_right_text ul.opening-hours-list li {
+    margin-bottom: 10px;
+}
+
+footer .footer_widget .bottom_center_text ul.contact-info-list a,
+footer .footer_widget .bottom_right_text ul.opening-hours-list a {
+    text-decoration: none;
+    color: BlanchedAlmond;
+}
+
+footer .footer_top .footer_illustrate {
+    background: url(../img/footer-illustration.png) no-repeat bottom center;
+    background-size: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+footer .footer_top .runningcycle {
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+footer .footer_top .runningcycle section {
+    background: url(../img/delivery-boy.svg) no-repeat bottom left;
+    background-size: 150px;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+    z-index: 3;
+    animation: runningbicycle 20s linear 1s infinite;
+}
+
+@keyframes runningbicycle {
+    100% {
+        transform: translateX(2000px);
+    }
+}
+
+#copyright {
+    height: 75px;
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#copyright p {
+    font-size: 16px;
+    color: BlanchedAlmond;
+}
+
+/*====== Scroll to Top Button ======*/
+#scrollTopbtn #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #7FBD32;
+    color: #213409;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    transition: 1s;
+}
+
+#scrollTopbtn #myBtn:hover {
+    background-color: khaki;
+    color: Sienna;
+    transition: 1s;
+}
